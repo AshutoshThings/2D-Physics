@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orbit Simulation</title>
+  <link rel="stylesheet" href="orbit.css"/>
+</head>
+<body>
+  <h1>🌍 Orbit Simulation</h1>
+  <div class="Pane">
+  <div class="leftPane">
+    <label for="integrator">Choose Integrator:</label>
+    <select id="integrator">
+      <option value="rk4">Runge-Kutta (RK4)</option>
+      <option value="euler">Explicit Euler</option>
+    </select>
+    <div id="stats"></div>
+  </div>
+  
+  <canvas id="canvas" width="700" height="500"></canvas>
+  </div>
+
+  <section id="physics-info">
+  <h2>🧪 Scientific Background</h2>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><b>Newton’s Law of Gravitation</b>: 
+      <code>F = (G × M × m) / r²</code>
+    </li>
+    <li><b>Circular Orbital Speed</b>: 
+      <code>v = √(G × M / r)</code>
+    </li>
+    <li><b>Kinetic Energy (KE)</b>: 
+      <code>½mv²</code>
+    </li>
+    <li><b>Potential Energy (PE)</b>: 
+      <code>−G × M × m / r</code>
+    </li>
+    <li><b>Numerical Integration</b>: Euler & Runge-Kutta methods used for simulation</li>
+  </ul>
+
+  <h3>Constants Used</h3>
+  <ul>
+    <li><b>G</b> (Gravitational Constant, scaled): <code>5000</code></li>
+    <li><b>M</b> (Central Mass): <code>100</code></li>
+    <li><b>Time Step</b>: <code>1/60 sec</code></li>
+  </ul>
+
+  <h3>Vectors</h3>
+  <ul>
+    <li><span style="color:skyblue;"><b>Blue arrow</b></span> = velocity vector</li>
+    <li><span style="color:#ff8080;"><b>Red arrow</b></span> = gravitational acceleration vector</li>
+  </ul>
+
+  <h3>Note:</h3>
+  <p>
+    All units are in canvas pixels. While not to scale, the laws modeled mimic real-world orbital mechanics accurately.
+  </p>
+</section>
+
+
+  <script type="module" src="demos/demo1-orbit.js"></script>
+</body>
+</html>

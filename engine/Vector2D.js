@@ -12,4 +12,10 @@ export class Vector2D {
     const len = this.length();
     return len === 0 ? new Vector2D(0, 0) : this.scale(1 / len);
   }
+  get mag() {
+  return Math.sqrt(this.x * this.x + this.y * this.y);
+}
+  dot(v) {
+    return this.x * v.x + this.y * v.y;
+  }
 }

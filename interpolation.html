@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newton Interpolation</title>
+  <link rel="stylesheet" href="interpolation.css" />
+</head>
+<body>
+  <h1>Newton's Interpolation Visualization</h1>
+  <div id="container">
+  <canvas id="canvas" width="700" height="500"></canvas>
+  <div id="coefficients"></div>
+</div>
+  <section id="interpolation-info">
+    <h2>📘 Newton's Divided Difference Polynomial</h2>
+    <p>The interpolated polynomial is constructed using divided differences as:</p>
+    <code>
+      P(x) = f[x0] + f[x0,x1](x-x0) + f[x0,x1,x2](x-x0)(x-x1) + ...
+    </code>
+
+    <h3>Initially Used Points</h3>
+    <ul>
+      <li>(0, 1)</li>
+      <li>(1, 2)</li>
+      <li>(2, 0)</li>
+      <li>(3, 2)</li>
+      <li>(4, 1)</li>
+    </ul>
+
+    <h3>Divided Difference Coefficients:</h3>
+    <div id="coefficients">Beside the Canvas</div>
+
+    <h3>Concepts</h3>
+    <ul>
+      <li><b>Divided Differences</b>: recursively computed slopes for polynomial terms</li>
+      <li><b>Degree of polynomial</b>: n - 1 where n = number of data points</li>
+      <li><b>Real-Time Curve</b>: Generated using calculated polynomial</li>
+    </ul>
+  </section>
+
+  <script type="module" src="demos/demo3-interpolation.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* vector.css */
+
+body {
+  background-color: #111;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #00ffe0;
+}
+
+canvas {
+  background-color: black;
+  border: 2px solid #333;
+  display: block;
+  margin: 0 auto 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 224, 0.2);
+}
+
+#field-info {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#field-info h2 {
+  color: #00ffe0;
+}
+
+#field-info ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+#field-info code {
+  background-color: #222;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #0ff;
+}

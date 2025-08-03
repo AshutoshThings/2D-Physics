@@ -17,7 +17,8 @@ canvas {
   margin: 0 auto 1rem;
   background-color: #1e1e1e;
   border: 1px solid #444;
-  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffc84d;
 }
 
 .controls {
@@ -52,4 +53,22 @@ select {
 #physics-info h2 {
   color: #ffca28;
   margin-bottom: 1rem;
+}
+.Pane{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.leftPane{
+    margin: 0 40px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+#stats{
+    margin : 50px 0px;
+    padding: 10px;
+    color : lightgreen;
+    text-align: center;
 }
