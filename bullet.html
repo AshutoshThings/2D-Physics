@@ -20,23 +20,48 @@
     </div>
   </div>
 
+<section id="collision-info">
+  <h2>💥 Collision Physics</h2>
+  <div class="columns">
+    <div class="column">
+      <h3>🔧 Types of Collisions</h3>
+      <p>
+        In physics, collisions are categorized by how energy and momentum behave:
+      </p>
+      <ul>
+        <li><strong>Elastic:</strong> Momentum and kinetic energy are both conserved.</li>
+        <li><strong>Inelastic:</strong> Momentum is conserved, but kinetic energy is not.</li>
+      </ul>
 
-  <section id="physics-info">
-    <h2>🔬 Scientific Information</h2>
+      <p><strong>Key Principle:</strong></p>
+      <code>m₁ × u₁ + m₂ × u₂ = m₁ × v₁ + m₂ × v₂</code>
+      <p>This equation always holds true (momentum conservation).</p>
+    </div>
+
+    <div class="column">
+      <h3>📐 Velocity Calculations</h3>
+      <p><strong>Elastic Collision</strong> final velocities:</p>
+      <code>v₁ = [(m₁−m₂)/(m₁+m₂)] × u₁ + [2m₂/(m₁+m₂)] × u₂</code><br>
+      <code>v₂ = [2m₁/(m₁+m₂)] × u₁ + [(m₂−m₁)/(m₁+m₂)] × u₂</code>
+
+      <p><strong>Inelastic Collision</strong> final velocity:</p>
+      <code>v = (m₁×u₁ + m₂×u₂) / (m₁ + m₂)</code>
+      <p>After collision, both move together (perfectly inelastic).</p>
+    </div>
+  </div>
+
+  <div class="constants">
+    <h3>⚙️ Constants Used</h3>
     <ul>
-      <li><b>Conservation of Momentum</b>: <code>m₁v₁ + m₂v₂ = (m₁ + m₂)v′</code></li>
-      <li><b>Elastic Collision</b>: Both momentum and kinetic energy are conserved.</li>
-      <li><b>Inelastic Collision</b>: Only momentum is conserved; kinetic energy is partially lost.</li>
+      <li><strong>Mass of Bullet (m₁)</strong>: <code>2</code></li>
+      <li><strong>Mass of Block (m₂)</strong>: <code>8</code></li>
+      <li><strong>Initial Bullet Velocity (u₁)</strong>: <code>5 px/frame</code></li>
+      <li><strong>Initial Block Velocity (u₂)</strong>: <code>0</code></li>
+      <li><strong>Collision Mode:</strong> Selected from dropdown (Elastic/Inelastic)</li>
     </ul>
+  </div>
+</section>
 
-    <h3>Vectors:</h3>
-    <ul>
-      <li><b>Red arrow</b>: Velocity vector before collision</li>
-      <li><b>Green arrow</b>: Velocity vector after collision</li>
-    </ul>
-
-    <p>All distances are in canvas pixels. Simulation is a simplified model of real-world physics.</p>
-  </section>
 
   <script type="module" src="demos/demo2-bullet-collision.js"></script>
 </body>

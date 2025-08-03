@@ -11,8 +11,51 @@
 
   <canvas id="canvas" width="700" height="500"></canvas>
 
-  <section id="field-info"></section>
 
+  <section id="vector-theory">
+  <h2>🧭 Understanding the Vector Field</h2>
+  <div class="vector-columns">
+    <div class="vector-column">
+      <h3>🔄 What’s Being Simulated?</h3>
+      <p>
+        This simulation displays a <strong>rotational vector field</strong>—a mathematical representation
+        of direction and magnitude across space. Here, particles are influenced by a central point,
+        creating a swirl-like behavior.
+      </p>
+
+      <p>
+        Such vector fields are often seen in:
+        <ul>
+          <li>🌀 <b>Fluid flow</b> (e.g., whirlpools, eddies)</li>
+          <li>🌪 <b>Rotating force fields</b> (like magnetic or vortex fields)</li>
+          <li>🌌 <b>Celestial mechanics</b> (gravitational gradients)</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="vector-column">
+      <h3>📐 Mathematical Basis</h3>
+      <p><b>Vector at point</b> <code>(x, y)</code> is defined as:</p>
+      <code>F(x, y) = (-dy / r, dx / r)</code>
+      <p>
+        This creates a <strong>perpendicular rotational effect</strong> around the center by rotating the
+        radial vector by 90°. The magnitude is normalized and scaled for visibility.
+      </p>
+
+      <ul>
+        <li><b>dx = x − centerX</b></li>
+        <li><b>dy = y − centerY</b></li>
+        <li><b>r = √(dx² + dy²)</b></li>
+      </ul>
+
+      <p>
+        Each particle samples the field at its location and moves slightly in that direction, creating
+        natural, circular motion.
+      </p>
+    </div>
+  </div>
+</section>
+  
   <script type="module" src="demos/demo4-vectorfield.js"></script>
 </body>
 </html>

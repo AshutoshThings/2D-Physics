@@ -20,47 +20,56 @@
   
   <canvas id="canvas" width="700" height="500"></canvas>
   </div>
+<section id="physics-details">
+  <h2>🔬 Physics Behind the Simulation</h2>
+  <div class="columns">
+    <div class="column">
+      <h3>🌍 Newtonian Gravity</h3>
+      <p>
+        Every object with mass attracts every other object. In our case, the orbiting body is attracted toward a central mass (like a planet or star).
+      </p>
+      <p><strong>Equation:</strong> <code>F = G × M × m / r²</code></p>
+      <p>
+        This results in acceleration:
+        <br /><code>a = F / m = G × M / r²</code>
+      </p>
+      <p>
+        In vector form:
+        <br /><code>𝐚⃗ = − (G × M) / |𝐫⃗|³ × 𝐫⃗</code>
+      </p>
+    </div>
 
-  <section id="physics-info">
-  <h2>🧪 Scientific Background</h2>
+    <div class="column">
+      <h3>⚙️ Numerical Methods</h3>
+      <p>
+        Simulations use step-by-step calculations to update motion using integration methods.
+      </p>
+      <h4>Euler’s Method</h4>
+      <p>
+        <code>v(t+Δt) = v(t) + a(t) × Δt</code><br />
+        <code>r(t+Δt) = r(t) + v(t) × Δt</code>
+      </p>
+      <p>✅ Fast but error-prone over time</p>
 
-  <h3>Key Concepts</h3>
-  <ul>
-    <li><b>Newton’s Law of Gravitation</b>: 
-      <code>F = (G × M × m) / r²</code>
-    </li>
-    <li><b>Circular Orbital Speed</b>: 
-      <code>v = √(G × M / r)</code>
-    </li>
-    <li><b>Kinetic Energy (KE)</b>: 
-      <code>½mv²</code>
-    </li>
-    <li><b>Potential Energy (PE)</b>: 
-      <code>−G × M × m / r</code>
-    </li>
-    <li><b>Numerical Integration</b>: Euler & Runge-Kutta methods used for simulation</li>
-  </ul>
+      <h4>Runge-Kutta (RK4)</h4>
+      <p>
+        More accurate: takes 4 slope samples per step.
+      </p>
+      <p>✅ Ideal for curved paths like orbits</p>
+    </div>
+  </div>
 
-  <h3>Constants Used</h3>
-  <ul>
-    <li><b>G</b> (Gravitational Constant, scaled): <code>5000</code></li>
-    <li><b>M</b> (Central Mass): <code>100</code></li>
-    <li><b>Time Step</b>: <code>1/60 sec</code></li>
-  </ul>
-
-  <h3>Vectors</h3>
-  <ul>
-    <li><span style="color:skyblue;"><b>Blue arrow</b></span> = velocity vector</li>
-    <li><span style="color:#ff8080;"><b>Red arrow</b></span> = gravitational acceleration vector</li>
-  </ul>
-
-  <h3>Note:</h3>
-  <p>
-    All units are in canvas pixels. While not to scale, the laws modeled mimic real-world orbital mechanics accurately.
-  </p>
+  <div class="constants">
+    <h3>🔢 Constants Used</h3>
+    <ul>
+      <li><strong>G</strong> (Gravitational Constant, scaled): <code>5000</code></li>
+      <li><strong>M</strong> (Central Mass): <code>100</code></li>
+      <li><strong>Time Step (Δt)</strong>: <code>1/60 sec</code></li>
+      <li><strong>Initial Orbit Radius</strong>: <code>100 px</code></li>
+      <li><strong>Initial Velocity</strong>: <code>v = √(G × M / r)</code></li>
+    </ul>
+  </div>
 </section>
-
-
   <script type="module" src="demos/demo1-orbit.js"></script>
 </body>
 </html>
